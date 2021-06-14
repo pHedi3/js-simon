@@ -32,15 +32,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for(var x = 0; x < userNumbers.length; x++) {
             if (pcNumbers.includes(userNumbers[x])) {
-                document.querySelector('.result').innerHTML += 'numero c\'è ' + userNumbers[x] + '<br>';
+                document.querySelector('.result').innerHTML += '<div class="green">' + 'numero c\'è ' + userNumbers[x] + '</div>'
                 pcNumbers.splice(pcNumbers.indexOf(userNumbers[x]), 1)
+
             } else {
-                document.querySelector('.result').innerHTML += 'numero non c\'è ' + userNumbers[x] + '<br>';
+                document.querySelector('.result').innerHTML += '<div class="red">' + 'numero non c\'è ' + userNumbers[x] + '</div>';
+
             }
         }
-        document.querySelector('.result').innerHTML += 'i numeri che hai dimenticato sono ' + pcNumbers;
-    }, 30000)
-
-
+        document.querySelector('.result').innerHTML += '<div>' + 'i numeri che hai dimenticato sono ' + pcNumbers + '</div>';
+    }, 3000)
 });
 
